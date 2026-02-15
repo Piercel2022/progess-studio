@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Studio - Transform Your Productivity | Notion Template</title>
+    <meta name="description" content="Stop managing tasks. Start making progress. The only task management system that helps you complete 3x more meaningful work—without the overwhelm.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .pulse-button {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: .8;
+            }
+        }
+        
+        .hero-pattern {
+            background-color: #667eea;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .check-icon {
+            color: #10b981;
+        }
+        
+        .star-rating {
+            color: #fbbf24;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl">⚡</span>
+                    <span class="text-xl font-bold text-gray-900">Progress Studio</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900 transition">Features</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-gray-900 transition">Reviews</a>
+                    <a href="#faq" class="text-gray-600 hover:text-gray-900 transition">FAQ</a>
+                    <a href="#pricing" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern text-white py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                    Stop Managing Tasks.<br>
+                    <span class="text-blue-200">Start Making Progress.</span>
+                </h1>
+                <p class="text-xl lg:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+                    The only task management system that helps you complete <span class="font-bold text-white">3x more meaningful work</span>—without the overwhelm.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                    <a href="#pricing" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-xl w-full sm:w-auto flex items-center justify-center space-x-2">
+                        <span>🚀 Get Progress Studio - $39</span>
+                    </a>
+                    <a href="#demo" class="bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-800 transition w-full sm:w-auto flex items-center justify-center space-x-2">
+                        <i data-lucide="play-circle" class="w-5 h-5"></i>
+                        <span>See Live Demo</span>
+                    </a>
+                </div>
+                
+                <!-- Social Proof -->
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-blue-100">
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="users" class="w-5 h-5"></i>
+                        <span>847+ professionals using it</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="flex">
+                            <span class="star-rating">★★★★★</span>
+                        </div>
+                        <span>4.9/5 from 230+ reviews</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Image / Screenshot -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 mb-20">
+        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <img src="./pictures/progress-studio-thumbnail-1.png" alt="Progress Studio Dashboard" class="w-full h-auto">
+            <div class="bg-gradient-to-r from-gray-50 to-blue-50 p-4 text-center text-sm text-gray-600">
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-4 text-gray-900">
+                Does This Sound Familiar?
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-12">You're not alone. Here's what most people struggle with:</p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="flex items-start space-x-3 p-4 bg-red-50 rounded-lg">
+                    <span class="text-red-500 text-xl font-bold">✗</span>
+                    <p class="text-gray-700">You have <strong>50+ tasks</strong> but no idea where to start</p>
+                </div>
+                <div class="flex items-start space-x-3 p-4 bg-red-50 rounded-lg">
+                    <span class="text-red-500 text-xl font-bold">✗</span>
+                    <p class="text-gray-700">Important work gets <strong>buried under urgent busywork</strong></p>
+                </div>
+                <div class="flex items-start space-x-3 p-4 bg-red-50 rounded-lg">
+                    <span class="text-red-500 text-xl font-bold">✗</span>
+                    <p class="text-gray-700">You spend more time <strong>organizing than actually doing</strong></p>
+                </div>
+                <div class="flex items-start space-x-3 p-4 bg-red-50 rounded-lg">
+                    <span class="text-red-500 text-xl font-bold">✗</span>
+                    <p class="text-gray-700">Your task list <strong>grows faster</strong> than you can complete it</p>
+                </div>
+                <div class="flex items-start space-x-3 p-4 bg-red-50 rounded-lg">
+                    <span class="text-red-500 text-xl font-bold">✗</span>
+                    <p class="text-gray-700">You feel productive but <strong>aren't making real progress</strong></p>
+                </div>
+                <div class="flex items-start space-x-3 p-4 bg-red-50 rounded-lg">
+                    <span class="text-red-500 text-xl font-bold">✗</span>
+                    <p class="text-gray-700">Every system feels <strong>too complex or too simple</strong></p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-xl text-gray-700 leading-relaxed">
+                    You're not lazy. You're not disorganized.<br>
+                    <span class="font-bold text-gray-900">You just need a system that actually works with how your brain functions.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+                    Introducing Progress Studio
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    A beautifully simple task management system built on one core principle:
+                </p>
+                <p class="text-2xl font-bold gradient-text mt-4">
+                    You don't need to manage every task.<br>
+                    You need to know your next best move.
+                </p>
+            </div>
+            
+            <!-- How It Works -->
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="text-5xl mb-4">🌅</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">1. Morning (2 minutes)</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Open "Today's Focus" → See exactly what matters now → Start with confidence
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="text-5xl mb-4">⚡</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">2. Throughout the Day</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Check off tasks → Capture new ones instantly → See progress in real-time
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="text-5xl mb-4">📊</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">3. End of Week (10 min)</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Review what you accomplished → Celebrate wins → Plan next week
+                    </p>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500 p-8 rounded-lg">
+                <p class="text-xl text-gray-800 font-semibold mb-2">The Result?</p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    ✅ More meaningful work done<br>
+                    ✅ Less mental clutter<br>
+                    ✅ Consistent progress toward your goals
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-4 text-gray-900">
+                What Makes Progress Studio Different
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+                Built for real productivity. Features that actually help you get things done.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Feature 1 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+                    <div class="text-3xl">🎯</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Today's Focus View</h3>
+                        <p class="text-gray-600">Stop decision paralysis. See only what matters right now based on deadlines and priority.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+                    <div class="text-3xl">⚡</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Quick Wins (15-min tasks)</h3>
+                        <p class="text-gray-600">Fill spare moments productively. Perfect for between meetings or low-energy periods.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+                    <div class="text-3xl">🔥</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">High Impact Board</h3>
+                        <p class="text-gray-600">Focus on needle-moving work. Visual board shows what truly drives your goals forward.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+                    <div class="text-3xl">📊</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Smart Project Views</h3>
+                        <p class="text-gray-600">Never lose track of commitments. See all tasks organized by area of life or work.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+                    <div class="text-3xl">💪</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Energy-Based Matching</h3>
+                        <p class="text-gray-600">Work with your brain, not against it. Match tasks to your current energy level.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+                    <div class="text-3xl">⏱️</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Time Estimates</h3>
+                        <p class="text-gray-600">Plan realistically. Know how long tasks take and schedule accordingly.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 7 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+                    <div class="text-3xl">🎨</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Beautiful, Minimal Design</h3>
+                        <p class="text-gray-600">Actually enjoy your productivity system. Clean interface reduces overwhelm.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 8 -->
+                <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+                    <div class="text-3xl">📱</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Works on Mobile</h3>
+                        <p class="text-gray-600">Manage tasks anywhere. Optimized for Notion's mobile app.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-4 text-gray-900">
+                What People Are Saying
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-16">Join hundreds of professionals already making progress</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex mb-4">
+                        <span class="star-rating">★★★★★</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "Finally, a task system I actually stick with. The 'Today's Focus' view changed everything—I know exactly where to start each morning instead of feeling paralyzed by my list."
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full flex items-center justify-center text-white font-bold">
+                            SK
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Sarah K.</p>
+                            <p class="text-sm text-gray-600">Marketing Manager</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex mb-4">
+                        <span class="star-rating">★★★★★</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "I've tried Todoist, Asana, TickTick... you name it. Progress Studio is the first system that actually reduced my anxiety instead of adding to it. The energy-level feature is genius."
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-400 rounded-full flex items-center justify-center text-white font-bold">
+                            DL
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">David L.</p>
+                            <p class="text-sm text-gray-600">Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex mb-4">
+                        <span class="star-rating">★★★★★</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "Worth every penny. I'm completing 2-3x more high-impact work per week, and I actually have time left over for myself. The quick wins view alone is worth the price."
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-gradient-to-br from-pink-400 to-orange-400 rounded-full flex items-center justify-center text-white font-bold">
+                            MR
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Maya R.</p>
+                            <p class="text-sm text-gray-600">Freelance Designer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Aggregate Rating -->
+            <div class="text-center">
+                <div class="inline-flex items-center space-x-2 bg-white px-8 py-4 rounded-full shadow-lg">
+                    <span class="star-rating text-2xl">★★★★★</span>
+                    <span class="text-xl font-bold text-gray-900">4.9/5</span>
+                    <span class="text-gray-600">from 230+ reviews</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16 text-gray-900">
+                Perfect For
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="flex items-center space-x-3 p-4">
+                    <i data-lucide="check-circle" class="w-6 h-6 check-icon flex-shrink-0"></i>
+                    <p class="text-lg text-gray-700"><strong>Busy professionals</strong> juggling multiple projects</p>
+                </div>
+                <div class="flex items-center space-x-3 p-4">
+                    <i data-lucide="check-circle" class="w-6 h-6 check-icon flex-shrink-0"></i>
+                    <p class="text-lg text-gray-700"><strong>Entrepreneurs</strong> who need clarity on what moves the needle</p>
+                </div>
+                <div class="flex items-center space-x-3 p-4">
+                    <i data-lucide="check-circle" class="w-6 h-6 check-icon flex-shrink-0"></i>
+                    <p class="text-lg text-gray-700"><strong>Freelancers</strong> balancing client work with business growth</p>
+                </div>
+                <div class="flex items-center space-x-3 p-4">
+                    <i data-lucide="check-circle" class="w-6 h-6 check-icon flex-shrink-0"></i>
+                    <p class="text-lg text-gray-700"><strong>Students</strong> managing coursework and personal goals</p>
+                </div>
+                <div class="flex items-center space-x-3 p-4">
+                    <i data-lucide="check-circle" class="w-6 h-6 check-icon flex-shrink-0"></i>
+                    <p class="text-lg text-gray-700"><strong>Parents</strong> coordinating family and work responsibilities</p>
+                </div>
+                <div class="flex items-center space-x-3 p-4">
+                    <i data-lucide="check-circle" class="w-6 h-6 check-icon flex-shrink-0"></i>
+                    <p class="text-lg text-gray-700"><strong>Anyone</strong> feeling overwhelmed by their current system</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center bg-blue-50 border-2 border-blue-200 p-8 rounded-2xl">
+                <p class="text-lg text-gray-700 mb-4">
+                    <strong>Not sure if it's right for you?</strong>
+                </p>
+                <p class="text-xl font-bold text-blue-600">
+                    We offer a 30-day money-back guarantee. Try it risk-free.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-4 text-gray-900">
+                Everything You Get
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-16">Complete system. Ready to use.</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <!-- Item 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">Progress Studio Template</h3>
+                    <p class="text-gray-600 text-sm">Complete task management system ready to duplicate</p>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">5 Smart Views</h3>
+                    <p class="text-gray-600 text-sm">Today, This Week, Quick Wins, High Impact, By Project</p>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">Quick-Add Button</h3>
+                    <p class="text-gray-600 text-sm">Capture tasks instantly without breaking flow</p>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl mb-4">📝</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">Weekly Review System</h3>
+                    <p class="text-gray-600 text-sm">Structured reflection to improve continuously</p>
+                </div>
+                
+                <!-- Item 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl mb-4">🎨</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">Beautiful Design</h3>
+                    <p class="text-gray-600 text-sm">Professional interface you'll actually enjoy using</p>
+                </div>
+                
+                <!-- Item 6 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">Mobile-Optimized</h3>
+                    <p class="text-gray-600 text-sm">Manage tasks on the go from your phone</p>
+                </div>
+                
+                <!-- Item 7 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl mb-4">📚</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">Setup Guide + Video</h3>
+                    <p class="text-gray-600 text-sm">Get started in 3 minutes with guided walkthrough</p>
+                </div>
+                
+                <!-- Item 8 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl mb-4">💬</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">Email Support</h3>
+                    <p class="text-gray-600 text-sm">Stuck? Get help directly from the creator</p>
+                </div>
+                
+                <!-- Item 9 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl mb-4">🔄</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-900">Lifetime Updates</h3>
+                    <p class="text-gray-600 text-sm">Get all future improvements free forever</p>
+                </div>
+            </div>
+            
+            <!-- Value Stack -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl max-w-md mx-auto">
+                <div class="space-y-3 mb-6">
+                    <div class="flex justify-between text-gray-700">
+                        <span>Progress Studio Template</span>
+                        <span class="font-semibold">$29</span>
+                    </div>
+                    <div class="flex justify-between text-gray-700">
+                        <span>5 Pre-Built Smart Views</span>
+                        <span class="font-semibold">$15</span>
+                    </div>
+                    <div class="flex justify-between text-gray-700">
+                        <span>Quick-Add Automation</span>
+                        <span class="font-semibold">$8</span>
+                    </div>
+                    <div class="flex justify-between text-gray-700">
+                        <span>Weekly Review System</span>
+                        <span class="font-semibold">$12</span>
+                    </div>
+                    <div class="flex justify-between text-gray-700">
+                        <span>Setup Guide + Video</span>
+                        <span class="font-semibold">$10</span>
+                    </div>
+                    <div class="flex justify-between text-gray-700">
+                        <span>Lifetime Updates</span>
+                        <span class="font-semibold">$20</span>
+                    </div>
+                    <div class="border-t-2 border-gray-300 pt-3 mt-3">
+                        <div class="flex justify-between text-gray-500">
+                            <span>Total Value:</span>
+                            <span class="line-through">$94</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-2xl font-bold text-gray-900">
+                    <span>Your Price Today:</span>
+                    <span class="text-green-600">$39</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
+                    Ready to Transform Your Productivity?
+                </h2>
+                <p class="text-xl text-gray-600">One-time payment. Lifetime access. No subscription.</p>
+            </div>
+            
+            <!-- Pricing Card -->
+            <div class="bg-gradient-to-br from-blue-600 to-purple-600 text-white p-12 rounded-3xl shadow-2xl max-w-2xl mx-auto">
+                <div class="text-center mb-8">
+                    <div class="text-5xl font-bold mb-2">$39</div>
+                    <div class="text-blue-100 text-lg mb-4">
+                        <span class="line-through">Regular $49</span> - Save $10
+                    </div>
+                    <div class="inline-block bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold">
+                        🔥 Limited Launch Pricing
+                    </div>
+                </div>
+                
+                <div class="space-y-3 mb-8">
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="check" class="w-5 h-5"></i>
+                        <span>Complete Progress Studio template</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="check" class="w-5 h-5"></i>
+                        <span>5 smart views + quick-add button</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="check" class="w-5 h-5"></i>
+                        <span>Weekly review framework</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="check" class="w-5 h-5"></i>
+                        <span>Setup guide + video walkthrough</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="check" class="w-5 h-5"></i>
+                        <span>Email support from creator</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="check" class="w-5 h-5"></i>
+                        <span>Lifetime updates (free forever)</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="check" class="w-5 h-5"></i>
+                        <span>30-day money-back guarantee</span>
+                    </div>
+                </div>
+                
+                <a href="#" class="block w-full bg-white text-purple-600 text-center px-8 py-5 rounded-xl font-bold text-xl hover:bg-gray-100 transition shadow-xl">
+                    🚀 Get Instant Access Now
+                </a>
+                
+                <div class="mt-6 text-center text-blue-100 text-sm space-y-1">
+                    <p>✓ Instant access after purchase</p>
+                    <p>✓ Secure checkout via Gumroad</p>
+                    <p>✓ No subscription - pay once, use forever</p>
+                </div>
+            </div>
+            
+            <!-- Guarantee Badge -->
+            <div class="text-center mt-12">
+                <div class="inline-flex items-center space-x-3 bg-green-50 border-2 border-green-200 px-6 py-4 rounded-full">
+                    <i data-lucide="shield-check" class="w-8 h-8 text-green-600"></i>
+                    <div class="text-left">
+                        <p class="font-bold text-gray-900">30-Day Money-Back Guarantee</p>
+                        <p class="text-sm text-gray-600">Try it risk-free. Full refund if you're not satisfied.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-4 text-gray-900">
+                Frequently Asked Questions
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-16">Everything you need to know</p>
+            
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Do I need Notion experience?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Not at all! The template includes a guided setup that takes 3 minutes. If you can click "duplicate," you can use this. Plus, we include a video walkthrough and written guide.
+                    </p>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Can I customize it for my needs?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Absolutely! Add your own views, properties, and projects. The setup guide shows you exactly how to customize everything. Make it work for your unique workflow.
+                    </p>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Will this work on mobile?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Yes! All views are optimized for Notion's mobile app. Manage your tasks anywhere—on your phone, tablet, or computer. Everything syncs automatically.
+                    </p>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">What if I don't like it?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We offer a 30-day money-back guarantee. If Progress Studio doesn't help you get more done, email us for a full refund—no questions asked. Your satisfaction is guaranteed.
+                    </p>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Is this a subscription?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        No! One-time payment of $39. Duplicate and use forever. You'll also get all future updates completely free. No recurring charges ever.
+                    </p>
+                </div>
+                
+                <!-- FAQ 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">How is this different from other task templates?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Most templates are either too simple (just a list) or too complex (overwhelming). Progress Studio is built on the principle that you don't need to manage every task—you need to know your next best move. It's the perfect balance of simplicity and power.
+                    </p>
+                </div>
+                
+                <!-- FAQ 7 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Can I share this with my team?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        This license is for individual use. Need team licenses? Contact us at hello@progressstudio.com for special team pricing.
+                    </p>
+                </div>
+                
+                <!-- FAQ 8 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Do you offer support?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Yes! Email support is included with your purchase. Most questions are answered within 24 hours. We're here to help you succeed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                Ready to Stop Feeling Overwhelmed?
+            </h2>
+            
+            <p class="text-xl mb-8 text-blue-100 leading-relaxed max-w-2xl mx-auto">
+                You've been trying to "get organized" for months. You've downloaded apps. Made lists. Set reminders.
+            </p>
+            
+            <p class="text-xl mb-8 text-blue-100 leading-relaxed max-w-2xl mx-auto">
+                But you're still stressed about what you're missing. Still wondering if you're working on the right things.
+            </p>
+            
+            <p class="text-2xl mb-12 font-semibold leading-relaxed max-w-2xl mx-auto">
+                It's not your fault. You just need a system that works with how your brain actually functions.
+            </p>
+            
+            <div class="bg-white/10 backdrop-blur border-2 border-white/30 p-8 rounded-2xl mb-12 max-w-2xl mx-auto">
+                <p class="text-xl leading-relaxed">
+                    Progress Studio gives you <strong>clarity, focus, and momentum</strong>—so you can spend less time managing tasks and more time achieving what matters.
+                </p>
+            </div>
+            
+            <a href="#pricing" class="inline-block bg-white text-purple-600 px-12 py-5 rounded-xl font-bold text-xl hover:bg-gray-100 transition shadow-2xl mb-8">
+                🚀 Get Progress Studio - $39
+            </a>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-blue-100 text-sm">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="check" class="w-5 h-5"></i>
+                    <span>Instant access after purchase</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="check" class="w-5 h-5"></i>
+                    <span>30-day money-back guarantee</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="check" class="w-5 h-5"></i>
+                    <span>Join 847+ productive professionals</span>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-white/20">
+                <p class="text-blue-100 mb-4">Still not sure?</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-6">
+                    <a href="mailto:hello@progressstudio.com" class="flex items-center space-x-2 text-white hover:text-blue-200 transition">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        <span>Email me your questions</span>
+                    </a>
+                    <a href="#demo" class="flex items-center space-x-2 text-white hover:text-blue-200 transition">
+                        <i data-lucide="eye" class="w-5 h-5"></i>
+                        <span>See more examples</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-2xl">⚡</span>
+                        <span class="text-xl font-bold text-white">Progress Studio</span>
+                    </div>
+                    <p class="text-sm">
+                        Transform your productivity with the task management system that actually works.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#features" class="hover:text-white transition">Features</a></li>
+                        <li><a href="#testimonials" class="hover:text-white transition">Reviews</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:hello@progressstudio.com" class="hover:text-white transition">Email Support</a></li>
+                        <li><a href="#" class="hover:text-white transition">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white transition">More Templates</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm">
+                <p>© 2026 Progress Studio. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-white transition">Terms & Conditions</a>
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+    
+    <!-- Smooth Scroll -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
